@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import { GETTOKEN, getToken } from '../Actions/Actions';
+import { GETTOKEN, GOTTOKEN } from '../Actions/Actions';
 
 function getToken({ type }) {
   switch (type) {
     case GETTOKEN: 
       return { type: GETTOKEN };
+    case GOTTOKEN:
+      return { type: GOTTOKEN };
   }
 }
 
