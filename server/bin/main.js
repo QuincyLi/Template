@@ -3,7 +3,6 @@ import path from 'path';
 import request from 'request';
 import views from 'koa-views';
 
-import license from '../license/license';
 import router from '../routes/index';
 
 const app = new Koa();
@@ -28,15 +27,6 @@ if (process.env.NODE_ENV === 'DEV') {
 
   app.use(hotMiddleware(complie));
 }
-
-// 获取静态资源
-request(`http://10.30.55.101/api/auth/oauth2/token?grantType=client_credential&appid=${license.appid}&secret=${license.secret}`, (error, response, body) => {
-  if (error) {
-    console.error(error);
-    return;
-  }
-  token = JSON.parse(body).accessToken;
-});
 
 // 加载静态资源
 app.use(views(
