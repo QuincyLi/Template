@@ -6,7 +6,7 @@ import request from '../Utils/request';
 
 function* getToken() {
   try {
-    const token = yield call(request('/getToken'));
+    const token = yield call(request, '/getToken');
     yield put({ type: GOTTOKEN, token });
   } catch(e) {
     console.log(e)
