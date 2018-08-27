@@ -45,7 +45,7 @@ module.exports = {
             }
         ]
     },
-    devtool: 'inline-source-map',
+    devtool: 'eval-source-map',
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/index.html",

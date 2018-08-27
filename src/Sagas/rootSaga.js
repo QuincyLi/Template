@@ -1,14 +1,13 @@
-import { call, put } from 'redux-saga/effects';
-import { takeEvery } from 'redux-saga';
+import { call, put, takeEvery } from 'redux-saga/effects';
 
 import { GETTOKEN, GOTTOKEN } from '../Actions/Actions';
-import request from '../Utils/request';
+import { request } from '../Utils/request';
 
 function* getToken() {
   try {
     const token = yield call(request, '/getToken');
     yield put({ type: GOTTOKEN, token });
-  } catch(e) {
+  } catch (e) {
     console.log(e)
   }
 }

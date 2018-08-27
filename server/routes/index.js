@@ -7,6 +7,10 @@ router.get('/', async (ctx) => {
   await ctx.render('views/index.html');
 });
 
+router.get('*', (ctx) => {
+  ctx.redirect('/');
+});
+
 router.post('/getToken', async (ctx) => {
   // 获取静态资源
   ctx.body = await request(`http://10.30.55.101/api/auth/oauth2/token?grantType=client_credential&appid=${license.appid}&secret=${license.secret}`, (error, response, body) => {
