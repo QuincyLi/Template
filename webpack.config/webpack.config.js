@@ -1,17 +1,22 @@
 var path = require('path');
-const HtmlWebPackPlugin = require("html-webpack-plugin");  
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack'); // 新增
 module.exports = {
     mode: 'development',
     entry: {
-      'index': [
-        'webpack-hot-middleware/client',
-        './src/index.js'
-      ]
+        'index': [
+            'webpack-hot-middleware/client',
+            './src/index.js'
+        ]
     },
     output: {
-      path: path.resolve('./dist'),
-      filename: 'bundle.js'
+        path: path.resolve('./dist'),
+        filename: 'bundle.js'
+    },
+    resolve: {
+        alias:{
+            root: './src'
+        }
     },
     module: {
         rules: [
@@ -24,8 +29,8 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [ 
-                    'style-loader', 
+                use: [
+                    'style-loader',
                     'css-loader'
                 ]
             },
@@ -49,7 +54,7 @@ module.exports = {
         new webpack.ProvidePlugin({
             jQuery: 'jquery',
             $: 'jquery',
-           Popper: ['popper.js', 'default'],
+            Popper: ['popper.js', 'default'],
         }),
         new webpack.NamedModulesPlugin(), // 新增
         new webpack.optimize.OccurrenceOrderPlugin(),
