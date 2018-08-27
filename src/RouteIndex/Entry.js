@@ -8,7 +8,11 @@ class Entry extends Component {
   render(){
     return (
       <Provider store={Store}>
-        
+        <Router>
+          <Switch>
+            
+          </Switch>
+        </Router>
       </Provider>
     );
   }
