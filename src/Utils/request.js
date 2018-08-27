@@ -1,5 +1,3 @@
-import fetch from 'fetch';
-
 export function request(url, options) {
   const newOptions = {
     ...options

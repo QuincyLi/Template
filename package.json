@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=DEV node server/app.js ",
+    "start": "cross-env NODE_ENV=DEV node server/app.js",
     "prod": "cross-env NODE_ENV=PROD",
+    "build": "cross-env NODE_ENV=PROD",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,7 +18,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
-    "fetch": "^1.1.0",
     "koa": "^2.5.2",
     "koa-router": "^7.4.0",
     "koa-views": "^6.1.4",
@@ -29,6 +29,7 @@
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
     "request": "^2.88.0"
   },
