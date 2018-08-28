@@ -5,7 +5,7 @@ module.exports = {
     mode: 'development',
     entry: {
         'index': [
-            'webpack-hot-middleware/client',
+            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=10000&reload=true',
             './src/index.js'
         ]
     },
@@ -50,11 +50,6 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: "./src/index.html",
             filename: "./index.html"
-        }),
-        new webpack.ProvidePlugin({
-            jQuery: 'jquery',
-            $: 'jquery',
-            Popper: ['popper.js', 'default'],
         }),
         new webpack.NamedModulesPlugin(), // 新增
         new webpack.optimize.OccurrenceOrderPlugin(),

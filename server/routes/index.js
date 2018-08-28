@@ -12,7 +12,7 @@ request(`http://10.30.55.101/api/auth/oauth2/token?grantType=client_credential&a
     console.error(error);
     return;
   }
-  token =  JSON.parse(body).accessToken;
+  token = JSON.parse(body).accessToken;
 });
 
 router.get('/', async (ctx) => {
