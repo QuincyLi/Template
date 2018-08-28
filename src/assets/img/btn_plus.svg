@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>btn_add_form_slice</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-5.000000, -295.000000)" fill="#4A68EA">
+            <path d="M20,310 L20,305 C20,304.447715 20.4477153,304 21,304 C21.5522847,304 22,304.447715 22,305 L22,310 L27,310 C27.5522847,310 28,310.447715 28,311 C28,311.552285 27.5522847,312 27,312 L22,312 L22,317 C22,317.552285 21.5522847,318 21,318 C20.4477153,318 20,317.552285 20,317 L20,312 L15,312 C14.4477153,312 14,311.552285 14,311 C14,310.447715 14.4477153,310 15,310 L20,310 Z" id="btn_add_form"></path>
+        </g>
+    </g>
+</svg>
