@@ -1,6 +1,7 @@
 var path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack'); // 新增
+
 module.exports = {
     mode: 'development',
     entry: {
@@ -28,10 +29,17 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
+                test: /\.less$/,
                 use: [
-                    'style-loader',
-                    'css-loader'
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'less-loader'
+                    }
                 ]
             },
             {
