@@ -12,7 +12,7 @@ class MainPage extends Component {
   render() {
     return (
       <div>
-        this is main Page!
+        this is main Page!!!
       </div>
     );
   }
