@@ -1,6 +1,5 @@
 import Koa from 'koa';
 import path from 'path';
-import request from 'request';
 import views from 'koa-views';
 
 import router from '../routes/index';

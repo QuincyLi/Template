@@ -1,11 +1,15 @@
 {
   "version": "0.2.0",
   "configurations": [
+
     {
       "type": "node",
       "request": "launch",
       "name": "启动程序",
-      "program": "${workspaceFolder}\\server\\app.js",
+      // win 配置
+      // "program": "${workspaceFolder}\\server\\app.js",
+      // mac 配置
+      "program": "${workspaceFolder}/server/app.js",
       "env": {
         "NODE_ENV": "DEV"
       }
