@@ -29,6 +29,17 @@ module.exports = {
                 }
             },
             {
+                test: /\.(png|woff|woff2|eot|ttf|svg|jpg|gif)$/,
+                loader: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: 'assets/fonts/[hash:8].[ext]',
+                        // 字体的相对路径
+                        publicPath: '/'
+                    }
+                }]
+            },
+            {
                 test: /\.less$/,
                 use: [
                     {
