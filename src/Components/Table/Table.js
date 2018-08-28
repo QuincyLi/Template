@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Table extends Component {
+import styles from './Table.less';
+
+class Table extends PureComponent {
   getAppList = () => {
     const { data } = this.props;
 
