@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { mapStateToProps } from './mapStateToProps'
 import { mapDispatchToProps } from './mapDispatchToProps'
 
-class mainPage extends Component {
+class MainPage extends Component {
   componentDidMount() {
     this.props.getToken();
   }
@@ -21,4 +21,4 @@ class mainPage extends Component {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(mainPage);
+)(MainPage);
