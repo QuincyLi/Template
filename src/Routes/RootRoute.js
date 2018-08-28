@@ -5,7 +5,7 @@ export function getRouteData() {
     {
       key: 'mainPage',
       path: '/',
-      component: dynamic(() => import('./mainPage/mainPage'))
+      component: dynamic(() => import('./MainPage/MainPage'))
     }
   ];
   
