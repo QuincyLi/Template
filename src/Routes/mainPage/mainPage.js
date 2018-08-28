@@ -1,25 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { GETTOKEN } from 'root/Actions/Actions';
-
-function mapStateToProps(state) {
-  return {
-
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-
-  }
-}
+import { mapStateToProps } from './mapStateToProps'
+import { mapDispatchToProps } from './mapDispatchToProps'
 
 class mainPage extends Component {
   componentDidMount() {
-    this.props.dispatch({
-      type: GETTOKEN
-    });
+    this.props.getToken();
   }
 
   render() {
@@ -33,4 +20,5 @@ class mainPage extends Component {
 
 export default connect(
   mapStateToProps,
+  mapDispatchToProps
 )(mainPage);
