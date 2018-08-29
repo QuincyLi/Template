@@ -6,7 +6,7 @@ import router from '../routes/index';
 
 const app = new Koa();
 
-let staticPath = process.env.NODE_ENV === 'DEV' ? '../../src' : 'dist';
+let staticPath = process.env.NODE_ENV === 'DEV' ? path.resolve(__dirname, '../../src') : 'dist';
 let token = '';
 
 if (process.env.NODE_ENV === 'DEV') {
@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'DEV') {
 
 // 加载静态资源
 app.use(views(
-  path.join(__dirname, staticPath), { extension: ['html', 'js'] }
+  path.join(__dirname, staticPath)
 ));
 
 app.use(router.routes()).use(router.allowedMethods());

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import styles from './Table.less';
+import plusIcon from 'root/assets/img/btn_plus.svg'
 
 class Table extends PureComponent {
   getAppList = () => {
@@ -15,11 +16,7 @@ class Table extends PureComponent {
         >
           {item ? (
             <div className={styles.itemBox} >
-              {item.coverUrl ? (
-                <img src={`${config.domain2}${item.coverUrl}`} className={styles.itemImg} alt="coverImg" />
-              ) : <div className={styles.itemImg} alt="coverImg" />
-
-              }
+              <div className={styles.itemImg} alt="coverImg" />
               <div
                 className={styles.editMask}
               >

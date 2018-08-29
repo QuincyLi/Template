@@ -1,10 +1,10 @@
-import { GETTOKEN } from 'root/Actions/Actions';
+import { GETAPPLIST } from 'root/Actions/Actions';
 
 export function mapDispatchToProps(dispatch) {
   return {
-    getToken: () => {
+    getAppList: () => {
       dispatch({
-        type: GETTOKEN
+        type: GETAPPLIST
       })
     }
   }

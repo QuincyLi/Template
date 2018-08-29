@@ -4,21 +4,23 @@ import { connect } from 'react-redux';
 import { mapStateToProps } from './mapStateToProps'
 import { mapDispatchToProps } from './mapDispatchToProps'
 
+import Table  from 'root/Components/Table/Table';
+
+@connect(mapStateToProps, mapDispatchToProps)
 class MainPage extends Component {
   componentDidMount() {
-    this.props.getToken();
+    this.props.getAppList();
   }
 
   render() {
     return (
       <div>
-        this is main Page!!!
+        <Table
+          data={this.props.data}
+        />
       </div>
     );
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MainPage);
+export default MainPage;

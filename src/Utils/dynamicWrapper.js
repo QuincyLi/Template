@@ -7,17 +7,24 @@ export function dynamic(component) {
     }
 
     componentDidMount() {
+      this.mounted = true;
       if (typeof component === 'function') {
         component()
           .then(res => res.default)
-          .then((component) => {
-            this.setState({
-              LoadedComp: component
-            });
+          .then((resComp) => {
+            if (this.mounted) {
+              this.setState({
+                LoadedComp: resComp
+              });
+            }
           }).catch((error) => {
             console.error(error);
           })
       }
+    }
+
+    componentWillUnmount() {
+      this.mounted = false;
     }
 
     render() {

@@ -1,11 +1,22 @@
+let Token = null;
+
 export function request(url, options) {
   const newOptions = {
+    headers: {},
     ...options
   }
-
-  return fetch(url, newOptions).then((result) => {
-    return result;
-  }).catch((err) => {
+  if (Token) {
+    newOptions.headers.Authorization = Token;
+  }
+  return fetch(url, newOptions).then(res => res.json()).catch((err) => {
     return err;
   });
+}
+
+export function getToken() {
+  request('/getToken', {
+    method: 'POST'
+  }).then(res => {
+    Token = res.token;
+  })
 }

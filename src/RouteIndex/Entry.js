@@ -5,8 +5,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Store from '../Store/Store';
 import Layout from '../Layout/Layout';
+import { getToken } from 'root/Utils/request';
 
 class Entry extends Component {
+  componentDidMount() {
+    getToken();
+  }
+
   render() {
     return (
       <Provider store={Store}>
@@ -14,7 +19,7 @@ class Entry extends Component {
           history={browserHistory}
         >
           <Switch>
-            <Route path="/" exact component={Layout}/>
+            <Route path="/" exact component={Layout} />
           </Switch>
         </Router>
       </Provider>

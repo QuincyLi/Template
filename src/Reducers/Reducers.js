@@ -1,14 +1,14 @@
 import { combineReducers } from 'redux';
-import { GETTOKEN, GOTTOKEN } from '../Actions/Actions';
+import { GETAPPLIST, GOTAPPLIST } from '../Actions/Actions';
 
-function getToken(defaultAction = GETTOKEN , action) {
+function getAppList(defaultAction = GETAPPLIST , action) {
   switch (action.type) {
-    case GETTOKEN:
-      return { type: GETTOKEN };
-    case GOTTOKEN:
+    case GETAPPLIST:
+      return { type: GETAPPLIST };
+    case GOTAPPLIST:
     default:
-      return { type: GOTTOKEN };
+      return { ...action };
   }
 }
 
-export default combineReducers({ getToken: getToken });
+export default combineReducers({ AppList: getAppList });

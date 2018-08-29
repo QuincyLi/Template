@@ -1,14 +1,14 @@
-export const GETTOKEN = 'GETTOKEN';
-export const GOTTOKEN = 'GOTTOKEN';
+export const GETAPPLIST = 'GETAPPLIST';
+export const GOTAPPLIST = 'GOTAPPLIST';
 
-export function getToken() {
+export function getAppList() {
   return {
-    type: GETTOKEN
+    type: GETAPPLIST
   }
 }
 
-export function gotToken(){
+export function gotAppList(){
   return {
-    type: GOTTOKEM
+    type: GOTAPPLIST
   }
 }

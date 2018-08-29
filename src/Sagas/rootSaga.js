@@ -1,17 +1,17 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 
-import { GETTOKEN, GOTTOKEN } from '../Actions/Actions';
-import { getTokenSerivce } from 'root/Services/TokenServices';
+import { GETAPPLIST, GOTAPPLIST } from '../Actions/Actions';
+import { getAppListSerivce } from 'root/Services/AppListService';
 
-function* getToken() {
+function* getAppList() {
   try {
-    const token = yield call(getTokenSerivce);
-    yield put({ type: GOTTOKEN, token });
+    const response = yield call(getAppListSerivce);
+    yield put({ type: GOTAPPLIST });
   } catch (e) {
     console.log(e)
   }
 }
 
 export function* watchGetToken() {
-  yield takeEvery(GETTOKEN, getToken);
+  yield takeEvery(GETAPPLIST, getAppList);
 }
