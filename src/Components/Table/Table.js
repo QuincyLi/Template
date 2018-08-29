@@ -5,6 +5,8 @@ import plusIcon from 'root/assets/img/btn_plus.svg'
 
 class Table extends PureComponent {
   getAppList = () => {
+    console.log(styles);
+    
     const { data } = this.props;
 
     const listData = data || [];
@@ -20,15 +22,14 @@ class Table extends PureComponent {
               <div
                 className={styles.editMask}
               >
-                {this.props.getExtra(item)}
+                {/* {this.props.getExtra(item)} */}
               </div>
             </div>
           ) : (
-            <div className={styles.addNew} style={{ backgroundColor: '#fff' }}>
-              {/* <span className={styles.anticonPlus} /> */}
-              <img src={plusIcon} alt="" className={styles.addIcon} />
-            </div>
-          )}
+              <div className={styles.addNew} style={{ backgroundColor: '#fff' }}>
+                <img src={plusIcon} alt="" className={styles.addIcon} />
+              </div>
+            )}
 
           {this.getItemsDetail(item)}
         </div>

@@ -6,7 +6,7 @@ import { getAppListSerivce } from 'root/Services/AppListService';
 function* getAppList() {
   try {
     const response = yield call(getAppListSerivce);
-    yield put({ type: GOTAPPLIST });
+    yield put({ type: GOTAPPLIST, ...response });
   } catch (e) {
     console.log(e)
   }

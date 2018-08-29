@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { mapStateToProps } from './mapStateToProps'
 import { mapDispatchToProps } from './mapDispatchToProps'
 
-import Table  from 'root/Components/Table/Table';
+import Table from 'root/Components/Table/Table';
 
 @connect(mapStateToProps, mapDispatchToProps)
 class MainPage extends Component {
@@ -14,11 +14,9 @@ class MainPage extends Component {
 
   render() {
     return (
-      <div>
-        <Table
-          data={this.props.data}
-        />
-      </div>
+      <Table
+        data={this.props.data}
+      />
     );
   }
 }
