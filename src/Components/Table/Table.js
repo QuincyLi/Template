@@ -5,8 +5,6 @@ import plusIcon from 'root/assets/img/btn_plus.svg'
 
 class Table extends PureComponent {
   getAppList = () => {
-    console.log(styles);
-    
     const { data } = this.props;
 
     const listData = data || [];
