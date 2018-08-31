@@ -5,9 +5,9 @@ export function request(url, options) {
     headers: {},
     ...options
   }
-  if (Token) {
-    newOptions.headers.Authorization = Token;
-  }
+  // if (Token) {
+  //   newOptions.headers.Authorization = Token;
+  // }
   return fetch(url, newOptions).then(res => res.json()).catch((err) => {
     return err;
   });

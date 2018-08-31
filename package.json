@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=DEV node server/app.js",
-    "prod": "cross-env NODE_ENV=PROD",
-    "build": "cross-env NODE_ENV=PROD",
+    "prod": "cross-env NODE_ENV=PROD node server/app.js",
+    "build": "cross-env NODE_ENV=PROD webpack --config webpack.config/webpack.prod.config.js --progress --color",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -20,6 +20,7 @@
     "babel-register": "^6.26.0",
     "koa": "^2.5.2",
     "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
     "koa-views": "^6.1.4",
     "koa-webpack-dev-middleware": "^2.0.2",
     "koa-webpack-hot-middleware": "^1.0.3",

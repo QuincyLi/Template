@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Provider, connect } from 'react-redux';
 import { browserHistory, Redirect } from 'react-router';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Store from '../Store/Store';
 import Layout from '../Layout/Layout';
@@ -9,7 +9,7 @@ import { getToken } from 'root/Utils/request';
 
 class Entry extends Component {
   componentDidMount() {
-    getToken();
+    // getToken();
   }
 
   render() {
