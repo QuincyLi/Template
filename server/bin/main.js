@@ -65,14 +65,21 @@ if (process.env.NODE_ENV === 'DEV') {
 //   })
 // );
 
-// app.use(
-//   serve(staticPath)
-// );
+app.use(
+  serve(staticPath)
+);
 
 router.use('', index.routes(), index.allowedMethods());
 
 app.use(router.routes(), router.allowedMethods());
 
+app.on('error', (err, ctx) => {
+  // token出错后，清空token
+  if (err.statusCode === 401) {
+    accessToken = '';
+    ctx.accessToken = '';
+  }
+});
 
 app.listen(3000, () => {
   console.log('port 3000 has been listened!');

@@ -67,11 +67,12 @@ router.post('/getToken', async ctx => {
 });
 
 router.post('/getAppList', async ctx => {
-  console.log(ctx.accessToken);
-  
-  const url = `http://10.30.52.63:8080/api/compose/manage/apps?accessToken=${ctx.accessToken}`;
-
-  ctx.body = await request.get(url);
+  const url = `http://10.30.52.25:8080/api/compose/manage/apps?accessToken=${ctx.accessToken}`;
+  try{
+    ctx.body = await request.get(url);
+  }catch(e){
+    console.log(e);
+  }
 });
 
 export default router;

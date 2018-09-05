@@ -5,7 +5,10 @@ const webpack = require('webpack'); // 新增
 module.exports = {
     mode: 'development',
     entry: {
-        'index': './src/index.js'
+        'index': [
+            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=10000&reload=true',
+            './src/index.js'
+        ]
     },
     output: {
         path: path.resolve('./dist/src'),
@@ -67,8 +70,8 @@ module.exports = {
     devtool: 'eval-source-map',
     plugins: [
         new HtmlWebPackPlugin({
-            template: "./src/index.ejs",
-            filename: "./index.ejs"
+            template: "./src/index.html",
+            filename: "./index.html"
         }),
         new webpack.NamedModulesPlugin(), // 新增
         new webpack.optimize.OccurrenceOrderPlugin(),
